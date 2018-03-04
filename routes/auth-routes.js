@@ -21,7 +21,7 @@ router.get('/twitter', (req, res) => {
 
 //callback rediect paths
 router.get('/google/redirect', passport.authenticate('google') ,(req, res) => {
-  res.send('You reached callback url');
+  res.send(req.user);
 })
 
 module.exports = router
